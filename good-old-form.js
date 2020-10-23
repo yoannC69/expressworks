@@ -4,7 +4,7 @@ const app = express()
 
 app.use(bodyparser.urlencoded({extended: false}))
 app.post('/form', function(req, res) {
-const result =	req.body.str.split('').reverse().join('')
+	const result = req.body.str.split('').reverse().join('')
 	res.end(result)
-    });
+});
 app.listen(process.argv[2])
